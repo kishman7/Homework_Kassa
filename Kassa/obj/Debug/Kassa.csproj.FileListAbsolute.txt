@@ -1,0 +1,10 @@
+f:\YURKO\SHAG\Project C#\13_04072021_Lab_WindowsForm (TabControl, Panel, Cheked, ChekBox, RadioButton, ComboBox, ListBox)_JSON\Homework_Kassa\Kassa\Kassa\bin\Debug\Kassa.exe.config
+f:\YURKO\SHAG\Project C#\13_04072021_Lab_WindowsForm (TabControl, Panel, Cheked, ChekBox, RadioButton, ComboBox, ListBox)_JSON\Homework_Kassa\Kassa\Kassa\bin\Debug\Kassa.exe
+f:\YURKO\SHAG\Project C#\13_04072021_Lab_WindowsForm (TabControl, Panel, Cheked, ChekBox, RadioButton, ComboBox, ListBox)_JSON\Homework_Kassa\Kassa\Kassa\bin\Debug\Kassa.pdb
+f:\YURKO\SHAG\Project C#\13_04072021_Lab_WindowsForm (TabControl, Panel, Cheked, ChekBox, RadioButton, ComboBox, ListBox)_JSON\Homework_Kassa\Kassa\Kassa\obj\Debug\Kassa.csprojAssemblyReference.cache
+f:\YURKO\SHAG\Project C#\13_04072021_Lab_WindowsForm (TabControl, Panel, Cheked, ChekBox, RadioButton, ComboBox, ListBox)_JSON\Homework_Kassa\Kassa\Kassa\obj\Debug\Kassa.Form1.resources
+f:\YURKO\SHAG\Project C#\13_04072021_Lab_WindowsForm (TabControl, Panel, Cheked, ChekBox, RadioButton, ComboBox, ListBox)_JSON\Homework_Kassa\Kassa\Kassa\obj\Debug\Kassa.Properties.Resources.resources
+f:\YURKO\SHAG\Project C#\13_04072021_Lab_WindowsForm (TabControl, Panel, Cheked, ChekBox, RadioButton, ComboBox, ListBox)_JSON\Homework_Kassa\Kassa\Kassa\obj\Debug\Kassa.csproj.GenerateResource.cache
+f:\YURKO\SHAG\Project C#\13_04072021_Lab_WindowsForm (TabControl, Panel, Cheked, ChekBox, RadioButton, ComboBox, ListBox)_JSON\Homework_Kassa\Kassa\Kassa\obj\Debug\Kassa.csproj.CoreCompileInputs.cache
+f:\YURKO\SHAG\Project C#\13_04072021_Lab_WindowsForm (TabControl, Panel, Cheked, ChekBox, RadioButton, ComboBox, ListBox)_JSON\Homework_Kassa\Kassa\Kassa\obj\Debug\Kassa.exe
+f:\YURKO\SHAG\Project C#\13_04072021_Lab_WindowsForm (TabControl, Panel, Cheked, ChekBox, RadioButton, ComboBox, ListBox)_JSON\Homework_Kassa\Kassa\Kassa\obj\Debug\Kassa.pdb
