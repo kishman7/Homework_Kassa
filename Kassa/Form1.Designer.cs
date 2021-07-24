@@ -29,6 +29,7 @@ namespace Kassa
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
@@ -65,10 +66,11 @@ namespace Kassa
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -113,17 +115,17 @@ namespace Kassa
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label9.Location = new System.Drawing.Point(71, 20);
+            this.label9.Location = new System.Drawing.Point(48, 20);
             this.label9.Name = "label9";
             this.label9.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label9.Size = new System.Drawing.Size(61, 25);
+            this.label9.Size = new System.Drawing.Size(50, 25);
             this.label9.TabIndex = 0;
-            this.label9.Text = "20,00";
+            this.label9.Text = "0,00";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(138, 29);
+            this.label8.Location = new System.Drawing.Point(155, 29);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(27, 13);
             this.label8.TabIndex = 0;
@@ -133,20 +135,25 @@ namespace Kassa
             // 
             this.textBox3.Location = new System.Drawing.Point(123, 109);
             this.textBox3.Name = "textBox3";
+            this.textBox3.ReadOnly = true;
             this.textBox3.Size = new System.Drawing.Size(108, 20);
             this.textBox3.TabIndex = 3;
+            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(123, 77);
             this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(108, 20);
             this.textBox2.TabIndex = 3;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(58, 43);
             this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(173, 20);
             this.textBox1.TabIndex = 3;
             // 
@@ -208,32 +215,34 @@ namespace Kassa
             // 
             this.panel1.Controls.Add(this.radioButton2);
             this.panel1.Controls.Add(this.radioButton1);
-            this.panel1.Location = new System.Drawing.Point(4, 70);
+            this.panel1.Location = new System.Drawing.Point(4, 76);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(113, 59);
+            this.panel1.Size = new System.Drawing.Size(113, 53);
             this.panel1.TabIndex = 0;
             // 
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(21, 39);
+            this.radioButton2.Location = new System.Drawing.Point(21, 34);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(51, 17);
             this.radioButton2.TabIndex = 0;
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "Сума";
             this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(21, 12);
+            this.radioButton1.Location = new System.Drawing.Point(21, 6);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(71, 17);
             this.radioButton1.TabIndex = 0;
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Кількість";
             this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // groupBox2
             // 
@@ -285,9 +294,9 @@ namespace Kassa
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label10.Location = new System.Drawing.Point(68, 20);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(61, 25);
+            this.label10.Size = new System.Drawing.Size(50, 25);
             this.label10.TabIndex = 0;
-            this.label10.Text = "25,00";
+            this.label10.Text = "0,00";
             // 
             // textBox11
             // 
@@ -295,6 +304,7 @@ namespace Kassa
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new System.Drawing.Size(48, 20);
             this.textBox11.TabIndex = 2;
+            this.textBox11.TextChanged += new System.EventHandler(this.textBox11_TextChanged);
             // 
             // textBox9
             // 
@@ -302,6 +312,7 @@ namespace Kassa
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(48, 20);
             this.textBox9.TabIndex = 2;
+            this.textBox9.TextChanged += new System.EventHandler(this.textBox9_TextChanged);
             // 
             // textBox7
             // 
@@ -309,6 +320,7 @@ namespace Kassa
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(48, 20);
             this.textBox7.TabIndex = 2;
+            this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
             // 
             // textBox5
             // 
@@ -316,11 +328,13 @@ namespace Kassa
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(48, 20);
             this.textBox5.TabIndex = 2;
+            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // textBox10
             // 
             this.textBox10.Location = new System.Drawing.Point(122, 96);
             this.textBox10.Name = "textBox10";
+            this.textBox10.ReadOnly = true;
             this.textBox10.Size = new System.Drawing.Size(48, 20);
             this.textBox10.TabIndex = 2;
             // 
@@ -328,6 +342,7 @@ namespace Kassa
             // 
             this.textBox8.Location = new System.Drawing.Point(122, 73);
             this.textBox8.Name = "textBox8";
+            this.textBox8.ReadOnly = true;
             this.textBox8.Size = new System.Drawing.Size(48, 20);
             this.textBox8.TabIndex = 2;
             // 
@@ -335,6 +350,7 @@ namespace Kassa
             // 
             this.textBox6.Location = new System.Drawing.Point(122, 48);
             this.textBox6.Name = "textBox6";
+            this.textBox6.ReadOnly = true;
             this.textBox6.Size = new System.Drawing.Size(48, 20);
             this.textBox6.TabIndex = 2;
             // 
@@ -342,6 +358,7 @@ namespace Kassa
             // 
             this.textBox4.Location = new System.Drawing.Point(122, 24);
             this.textBox4.Name = "textBox4";
+            this.textBox4.ReadOnly = true;
             this.textBox4.Size = new System.Drawing.Size(48, 20);
             this.textBox4.TabIndex = 2;
             // 
@@ -357,11 +374,11 @@ namespace Kassa
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(128, 8);
+            this.label6.Location = new System.Drawing.Point(119, 8);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(29, 13);
+            this.label6.Size = new System.Drawing.Size(55, 13);
             this.label6.TabIndex = 1;
-            this.label6.Text = "Ціна";
+            this.label6.Text = "Ціна, грн.";
             // 
             // checkBox4
             // 
@@ -372,6 +389,7 @@ namespace Kassa
             this.checkBox4.TabIndex = 0;
             this.checkBox4.Text = "Кока-кола";
             this.checkBox4.UseVisualStyleBackColor = true;
+            this.checkBox4.CheckedChanged += new System.EventHandler(this.checkBox4_CheckedChanged);
             // 
             // checkBox3
             // 
@@ -382,6 +400,7 @@ namespace Kassa
             this.checkBox3.TabIndex = 0;
             this.checkBox3.Text = "Картопля-фрі";
             this.checkBox3.UseVisualStyleBackColor = true;
+            this.checkBox3.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged);
             // 
             // checkBox2
             // 
@@ -392,6 +411,7 @@ namespace Kassa
             this.checkBox2.TabIndex = 0;
             this.checkBox2.Text = "Гамбургер";
             this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
             // 
             // checkBox1
             // 
@@ -402,6 +422,7 @@ namespace Kassa
             this.checkBox1.TabIndex = 0;
             this.checkBox1.Text = "Хот-дог";
             this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // groupBox3
             // 
@@ -415,6 +436,17 @@ namespace Kassa
             this.groupBox3.TabIndex = 0;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "ВСЬОГО до сплати";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
+            this.pictureBox1.Location = new System.Drawing.Point(25, 21);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(107, 74);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // label13
             // 
@@ -432,9 +464,9 @@ namespace Kassa
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label12.Location = new System.Drawing.Point(347, 36);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(82, 31);
+            this.label12.Size = new System.Drawing.Size(67, 31);
             this.label12.TabIndex = 0;
-            this.label12.Text = "45,00";
+            this.label12.Text = "0,00";
             // 
             // button1
             // 
@@ -444,17 +476,12 @@ namespace Kassa
             this.button1.TabIndex = 0;
             this.button1.Text = "До сплати";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // pictureBox1
+            // timer1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(25, 21);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(107, 74);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.timer1.Interval = 3000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Form1
             // 
@@ -466,6 +493,7 @@ namespace Kassa
             this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
             this.Text = "BestOil";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox5.ResumeLayout(false);
@@ -524,6 +552,7 @@ namespace Kassa
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 
